@@ -22,7 +22,7 @@ const SecuritySettingsPage = ({ }) => {
     const codeRef = useRef<any>(null);
 
     useSidebar({ type: 'page', init: true });
-    const { talent, getFullname, loading, sendVerificationCode, changePassword, getTalent } = useUser()
+    const { getFullname, loading, sendVerificationCode, changePassword } = useUser()
     const { toast, setToast } = useToast();
 
     const [form, setForm] = useState({
@@ -85,7 +85,6 @@ const SecuritySettingsPage = ({ }) => {
                 newRef.current.clear()
                 codeRef.current.clear()
 
-                getTalent();
                 setToast({ show: true, type: 'success', title: 'Successful', message: 'Password changed successfully', position: 'top-right' })
 
             }
@@ -112,7 +111,7 @@ const SecuritySettingsPage = ({ }) => {
 
                 <div className="flex items-center gap-x-[1.2rem]">
 
-                    <UserAvatar
+                    {/* <UserAvatar
                         size="min-w-[65px] min-h-[65px]"
                         avatar={talent.avatar}
                         name={getFullname(talent)}
@@ -121,7 +120,7 @@ const SecuritySettingsPage = ({ }) => {
                     <div className="p-0">
                         <h3 className="font-mona-medium text-[16px] pas-950">{getFullname(talent)}</h3>
                         <p className="font-mona-light pag-400 text-[14px]">@{talent.username}</p>
-                    </div>
+                    </div> */}
 
                 </div>
 
