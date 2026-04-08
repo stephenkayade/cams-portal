@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext, ReactNode } from "react"
+import { ReactNode } from "react"
 
 interface ITableBox{
     children: ReactNode,
@@ -6,10 +6,6 @@ interface ITableBox{
 }
 
 const TableBox = ({ children, className = '' }: ITableBox) => {
-
-    useEffect(() => {
-
-    }, [])
 
     const cc = () => {
         let result = `tablebox responsive w-full`

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext, ReactNode } from "react"
+import { ReactNode } from "react"
 import CardUI from "./CardUI";
 
 interface IListBox {
@@ -7,10 +7,6 @@ interface IListBox {
 }
 
 const ListBox = ({ children, className = '' }: IListBox) => {
-
-    useEffect(() => {
-
-    }, [])
 
     return (
         <>

@@ -1,4 +1,3 @@
-import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import routil from '../utils/routes.util';
 import routes from '../routes/routes';

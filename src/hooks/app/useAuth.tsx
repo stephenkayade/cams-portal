@@ -1,6 +1,4 @@
-import React, { useCallback, useContext, useEffect, useState } from 'react'
-import { IUserContext } from '../../utils/interfaces.util'
-import UserContext from '../../context/user/userContext'
+import  { useCallback, useEffect, useState } from 'react'
 import useContextType from '../useContextType'
 import useGoTo from '../useGoTo'
 import CookieService from '../../services/cookie.service'

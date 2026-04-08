@@ -1,4 +1,3 @@
-import React from "react";
 import { IRoute } from "../utils/interfaces.util";
 
 const appRoutes: Array<IRoute> = [

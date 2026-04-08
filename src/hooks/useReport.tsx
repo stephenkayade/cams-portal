@@ -1,9 +1,4 @@
-import React from 'react'
 import { IAPIReport } from '../utils/interfaces.util'
-
-interface IUseReport {
-    browser?: boolean
-}
 
 interface IExportToCSV {
     title: string,

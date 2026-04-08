@@ -1,4 +1,3 @@
-import React, { useEffect, useState, useContext } from "react"
 import { ICellHead } from "../../../utils/interfaces.util";
 
 const CellHead = (props: ICellHead) => {
@@ -9,10 +8,6 @@ const CellHead = (props: ICellHead) => {
         style,
         className = "text-left"
     } = props;
-
-    useEffect(() => {
-
-    }, [])
 
     const cc = () => {
 

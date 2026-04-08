@@ -1,4 +1,4 @@
-import React, { useEffect, ReactNode } from "react"
+import { ReactNode } from "react"
 
 interface ITableBody{
     className?: string,
@@ -11,10 +11,6 @@ const TableBody = (props: ITableBody) => {
         className = '',
         children
     } = props;
-
-    useEffect(() => {
-
-    }, [])
 
     return (
         <>

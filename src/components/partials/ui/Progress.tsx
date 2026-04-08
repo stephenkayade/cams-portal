@@ -1,4 +1,3 @@
-import React, { useEffect, useState, useContext } from "react"
 import { StatusEnum } from "../../../utils/enums.util";
 
 interface IProgress {
@@ -8,10 +7,6 @@ interface IProgress {
 }
 
 const Progress = ({ value, status, width = 'w-[100%]' }: IProgress) => {
-
-    useEffect(() => {
-
-    }, [])
 
     const cpr = () => {
 

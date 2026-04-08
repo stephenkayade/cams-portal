@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react'
 import { SemanticType } from '../utils/types.util'
-import { onboard as ob, pilltars } from '../_data/seed'
 
 const useRandom = () => {
 
@@ -8,16 +6,6 @@ const useRandom = () => {
         'info', 'ongoing', 'success', 'normal', 'default', 'pink', 'orange', 'yellow', 'error',
         'blue', 'purple', 'green', 'warning-2', 'warning', 'red',
     ]
-
-    const onboard: Array<{ color: string, bg: string, active: string }> = [
-        ob.purple, ob.blue, ob.green, ob.yellow, ob.pink
-    ]
-
-    useEffect(() => {
-
-        
-
-    }, [])
 
     const randomize = (len?: number) => {
 
@@ -64,24 +52,10 @@ const useRandom = () => {
 
     }
 
-    const randomizeOnboard = () => {
-        let rand = randomize(onboard.length);
-        return onboard[rand]
-    }
-
-    const randomizePilltar = () => {
-        let rand = randomize(pilltars.length);
-        return pilltars[rand]
-    }
-
     return { 
-        semantics, 
-        onboard, 
-        pilltars, 
+        semantics,
 
         randomize,
-        randomizePilltar,
-        randomizeOnboard,
         randomizeSemantics, 
         randomizeIndexes 
     }

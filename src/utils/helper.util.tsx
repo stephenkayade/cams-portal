@@ -4,7 +4,7 @@ import DOMPurify from 'dompurify'
 import { ICountry, IDateToday, IHelper, IPagination } from './interfaces.util';
 import { CurrencyType } from './enums.util';
 import countries from '../_data/countries.json'
-import { FormatDateType, SemanticType } from './types.util';
+import { FormatDateType } from './types.util';
 import { avatars } from '../_data/seed';
 
 const init = (type: string) => {

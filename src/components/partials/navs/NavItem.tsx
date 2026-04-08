@@ -1,4 +1,3 @@
-import React, { useEffect, useState, useContext } from "react"
 import { INavItem } from "../../../utils/interfaces.util";
 import { Link } from "react-router-dom";
 import Icon from "../icons/Icon";
@@ -8,7 +7,6 @@ const NavItem = (props: INavItem) => {
     const {
         type,
         active = false,
-        disabled = false,
         hide = false,
         icon = {
             enable: true,
@@ -19,10 +17,6 @@ const NavItem = (props: INavItem) => {
         path = '',
         onClick
     } = props;
-
-    useEffect(() => {
-
-    }, [])
 
     const nc = (z?: { la: boolean }) => {
 

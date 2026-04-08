@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext, ReactNode, CSSProperties } from "react"
+import { ReactNode, CSSProperties } from "react"
 
 interface ICardUI {
     children: ReactNode,
@@ -27,10 +27,6 @@ const CardUI = (props: ICardUI) => {
             y: 1
         }
     } = props;
-
-    useEffect(() => {
-
-    }, [])
 
     const cc = () => {
         let result = `card w-full ${radius ? '' : 'rounded-[0.6rem]'}`

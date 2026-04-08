@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useContext, useRef } from "react"
-import { INavbar, ITopbar } from "../../../utils/interfaces.util";
+import { useEffect, useState, useRef } from "react"
+import { INavbar } from "../../../utils/interfaces.util";
 import useGoTo from "../../../hooks/useGoTo";
 import IconButton from "../buttons/IconButton";
 import useGoBack from "../../../hooks/useGoBack";
@@ -7,11 +7,8 @@ import Icon from "../icons/Icon";
 import { Link } from "react-router-dom";
 import NavItem from "./NavItem";
 import NavDivider from "./NavDivider";
-import useSidebar from "../../../hooks/useSidebar";
 import UserAvatar from "../ui/UserAvatar";
-import useUser from "../../../hooks/app/useUser";
 import useAuth from "../../../hooks/app/useAuth";
-import helper from "../../../utils/helper.util";
 
 const Navbar = (props: INavbar) => {
 
@@ -27,8 +24,6 @@ const Navbar = (props: INavbar) => {
     const { goBack } = useGoBack()
     const { toDetailRoute } = useGoTo()
     const { logout, redirect } = useAuth()
-    const { talent, user, getUser, getTalent } = useUser()
-
 
     const [avatarDrop, setAvatarDrop] = useState<boolean>(false)
 
@@ -61,13 +56,6 @@ const Navbar = (props: INavbar) => {
 
         redirect(['superadmin', 'admin']);
 
-        if (helper.isEmpty(user, 'object')) {
-            await getUser()
-        }
-
-        if (helper.isEmpty(talent, 'object')) {
-            await getTalent()
-        }
     }
 
     const tc = () => {
@@ -157,7 +145,7 @@ const Navbar = (props: INavbar) => {
                             <UserAvatar
                                 size="w-[40px] h-[40px]"
                                 className="topbar-avatar"
-                                avatar={talent.avatar ? talent.avatar : '../../../images/assets/avatar.png'}
+                                avatar={'../../../images/assets/avatar.png'}
                                 name={'User Avatar'}
                             />
                             <Icon

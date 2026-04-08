@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import PageHeader from "../../../../components/partials/ui/PageHeader";
 import useSidebar from "../../../../hooks/useSidebar";
 import useEvents from "../../../../hooks/app/useEvents";

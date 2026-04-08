@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Fragment } from "react"
+import { useEffect, useState, Fragment } from "react"
 import { ISidebar } from "../../../utils/interfaces.util";
 import storage from "../../../utils/storage.util";
 import routes from "../../../routes/sidebar.route";
@@ -13,7 +13,6 @@ import useUser from "../../../hooks/app/useUser";
 const SideBar = (props: ISidebar) => {
 
     const {
-        pageTitle,
         collapsed
     } = props;
 

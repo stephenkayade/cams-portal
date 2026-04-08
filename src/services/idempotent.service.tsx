@@ -1,4 +1,3 @@
-import Cookies from 'universal-cookie';
 import CookieService from './cookie.service';
 import { CookieKeyType } from '../utils/enums.util';
 import { v4 as randomUUID } from 'uuid'

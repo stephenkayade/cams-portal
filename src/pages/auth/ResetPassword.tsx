@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react"
+import { useState } from "react"
 import Divider from "../../components/partials/Divider";
 import Alert from "../../components/partials/ui/Alert";
 import { IAlert } from "../../utils/interfaces.util";
@@ -9,9 +9,6 @@ import PasswordInput from "../../components/partials/inputs/PasswordInput";
 import Button from "../../components/partials/buttons/Button";
 import LinkButton from "../../components/partials/buttons/LinkButton";
 import useAuth from "../../hooks/app/useAuth";
-import Filter from "../../components/partials/drops/Filter";
-import helper from "../../utils/helper.util";
-import PhoneInput from "../../components/partials/inputs/PhoneInput";
 import Message from "../../components/partials/dialogs/Message";
 
 const ResetPassword = ({ }) => {
@@ -33,10 +30,6 @@ const ResetPassword = ({ }) => {
         show: false,
         message: ''
     });
-
-    useEffect(() => {
-
-    }, [])
 
     const handleReset = async (e: any) => {
 

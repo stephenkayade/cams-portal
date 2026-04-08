@@ -1,10 +1,8 @@
-import React, { useContext, useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import useContextType from './useContextType'
 import storage from '../utils/storage.util'
 import useGoTo from './useGoTo'
 import routes from '../routes/sidebar.route'
-import { IRoute } from '../utils/interfaces.util'
-import { IWorkspaceFeature } from '../models/Workspace.model'
 
 interface IUseSidebar {
     type?: 'sidebar' | 'page',

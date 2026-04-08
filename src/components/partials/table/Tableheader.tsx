@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext, Fragment } from "react"
+import { Fragment } from "react"
 import { ITableHead } from "../../../utils/interfaces.util";
 import CellHead from "./Cellhead";
 import TableRow from "./TableRow";
@@ -9,10 +9,6 @@ const TableHeader = (props: ITableHead) => {
         className = '',
         items
     } = props;
-
-    useEffect(() => {
-
-    }, [])
 
     return (
         <>

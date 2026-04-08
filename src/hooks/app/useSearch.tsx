@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { IPageSearch, ICollection, IListQuery } from '../../utils/interfaces.util'
 import useContextType from '../useContextType'
 import { SET_SEARCH } from '../../context/types';

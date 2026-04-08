@@ -1,6 +1,5 @@
 import { CallApiDTO } from "../dtos/axios.dto";
 import Axios from 'axios'
-import { ApiServiceType } from "../utils/types.util";
 import storage from "../utils/storage.util";
 import { IAPIResponse } from "../utils/interfaces.util";
 

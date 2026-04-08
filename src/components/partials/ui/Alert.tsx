@@ -1,4 +1,3 @@
-import React, { useEffect, useState, useContext } from "react"
 import { SemanticType } from "../../../utils/types.util";
 import Icon from "../icons/Icon";
 
@@ -19,10 +18,6 @@ const Alert = (props: IAlert) => {
         message = 'Checkout this alert!',
         className
     } = props;
-
-    useEffect(() => {
-
-    }, [])
 
     const getAlertType = (type: SemanticType) => {
 

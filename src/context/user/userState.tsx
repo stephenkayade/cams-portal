@@ -1,7 +1,7 @@
-import React, { useCallback, useMemo, useReducer } from 'react'
+import { useCallback, useMemo, useReducer } from 'react'
 import storage from '../../utils/storage.util'
 import { ICollection, ISetLoading, ISidebarProps, IToast, IUnsetLoading } from '../../utils/interfaces.util';
-import { collection, sidebar, toast, normWorkspace } from '../../_data/seed';
+import { collection, sidebar, toast } from '../../_data/seed';
 import sidebarRoutes from '../../routes/sidebar.route';
 
 import UserContext from './userContext';
@@ -11,8 +11,6 @@ import {
     SET_USERTYPE,
     SET_LOADING,
     SET_SIDEBAR,
-    SET_USER,
-    SET_RESPONSE,
     SET_TOAST,
     UNSET_LOADING,
     SET_LOADER,
@@ -24,18 +22,8 @@ const UserState = (props: any) => {
     const initialState = {
         users: collection,
         user: {},
-        talent: {},
-        // talent: {},
-        mainCareer: {},
-        subscription: {},
-        plan: {},
-        growth: {},
-        workspaces: collection,
-        workspace: {},
-        normWorkspace: normWorkspace,
         userType: '',
         loading: false,
-        workspaceLoading: false,
         loader: false,
         toast: toast,
         sidebar: sidebar
@@ -237,20 +225,11 @@ const UserState = (props: any) => {
     const contextValues = useMemo(() => ({
         users: state.users,
         user: state.user,
-        talent: state.talent,
-        mainCareer: state.mainCareer,
         userType: state.userType,
         loading: state.loading,
-        workspaceLoading: state.workspaceLoading,
         loader: state.loader,
         toast: state.toast,
-        subscription: state.subscription,
-        workspaces: state.workspaces,
-        workspace: state.workspace,
-        normWorkspace: state.normWorkspace,
-        plan: state.plan,
         sidebar: state.sidebar,
-        growth: state.growth,
         setToast: setToast,
         clearToast: clearToast,
         setUserType: setUserType,
@@ -263,19 +242,10 @@ const UserState = (props: any) => {
     }), [
         state.users,
         state.user,
-        state.talent,
-        state.mainCareer,
         state.userType,
         state.loading,
-        state.workspaceLoading,
         state.toast,
-        state.subscription,
-        state.workspaces,
-        state.workspace,
-        state.normWorkspace,
-        state.plan,
         state.sidebar,
-        state.growth,
         setToast,
         clearToast,
         setUserType,

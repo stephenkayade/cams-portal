@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react"
+import { useEffect, useState, useRef } from "react"
 import { ITopbar } from "../../../utils/interfaces.util";
 import IconButton from "../buttons/IconButton";
 import useGoBack from "../../../hooks/useGoBack";
@@ -23,7 +23,7 @@ const Topbar = (props: ITopbar) => {
     const { sidebar } = useSidebar({})
     const { goBack } = useGoBack()
     const { logout } = useAuth()
-    const { user, talent } = useUser()
+    const { user } = useUser()
 
 
     const [avatarDrop, setAvatarDrop] = useState<boolean>(false)
@@ -144,7 +144,7 @@ const Topbar = (props: ITopbar) => {
                             <UserAvatar
                                 size="w-[40px] h-[40px]"
                                 className="topbar-avatar"
-                                avatar={talent?.avatar ? talent.avatar : user?.avatar ? user.avatar : '../../../images/assets/avatar.png'}
+                                avatar={'../../../images/assets/avatar.png'}
                                 name={'User Avatar'}
                             />
                             <Icon

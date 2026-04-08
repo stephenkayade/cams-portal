@@ -1,16 +1,10 @@
-import React, { useEffect, useState, useContext } from "react"
 import { INavDivider } from "../../../utils/interfaces.util";
 
 const NavDivider = (props: INavDivider) => {
 
     const {
-        type,
         show = true
     } = props;
-
-    useEffect(() => {
-
-    }, [])
 
     const nc = () => {
         let nd = `p-[1rem]`

@@ -1,4 +1,3 @@
-import React, { useEffect, useState, useContext } from "react"
 import { ICellData } from "../../../utils/interfaces.util";
 
 const CellData = (props: ICellData) => {
@@ -11,10 +10,6 @@ const CellData = (props: ICellData) => {
         children,
         onClick
     } = props;
-
-    useEffect(() => {
-
-    }, [])
 
     const cc = () => {
         let result = `cell-data ${large ? 'px-[0.5rem] py-[1rem]' : 'px-[0.5rem] py-[0.5rem]'} h-[55px] align-middle border-b bdr-pag-100 pag-700`

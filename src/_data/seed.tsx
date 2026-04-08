@@ -1,10 +1,5 @@
-import Assessment from "../models/Assessment.model";
-import { IMilestonePath } from "../models/Roadmap.model";
-import { ITalentGrowth } from "../models/Talent.model";
-import { IBusinessWorkspace, IPersonalWorkspace } from "../models/Workspace.model";
 import sidebarRoutes from "../routes/sidebar.route";
-import { StatusEnum } from "../utils/enums.util";
-import { IAIQuestion, ICollection, IAppMetrics, IPagination, ISidebarProps, IToast, ICoreResource, IPoller, IAPIResponse } from "../utils/interfaces.util";
+import { ICollection, IPagination, ISidebarProps, IToast, IPoller, IAPIResponse } from "../utils/interfaces.util";
 
 const avatars = [
     { name: 'sandra', avatar: 'https://storage.googleapis.com/pacitude-buckets/sandra.png' },
@@ -115,24 +110,6 @@ const toast: IToast = {
     close: () => { }
 }
 
-// special to project
-const aiquestion: Array<IAIQuestion> = [];
-
-const metrics: IAppMetrics = {
-    loading: false,
-    message: '',
-    type: 'default',
-    resource: 'default',
-    data: {
-        roadmap: {
-            total: 0, enabled: 0, disabled: 0, pending: 0, completed: 0,
-            resource: {
-                total: 0, enabled: 0, disabled: 0,
-            }
-        }
-    }
-}
-
 const limits: Array<{ label: string, value: number }> = [
     { label: '5', value: 5 },
     { label: '10', value: 10 },
@@ -170,103 +147,6 @@ const allocatedTimes = [
     { name: 'Five', value: '5' }
 ]
 
-const coreResource: ICoreResource = {
-    industries: [],
-    careers: [],
-    fields: [],
-    skills: [],
-    topics: []
-}
-
-const onboard = {
-    stepBg: '#ECD4E8',
-    stepActive: '#45C2F0',
-    purple: { color: '#420988', bg: '#F4EBFF', active: '#6A08E2' },
-    blue: { color: '#055286', bg: '#EBF7FF', active: '#0B80CF' },
-    green: { color: '#055609', bg: '#EBFFEC', active: '#1FAE27' },
-    yellow: { color: '#8B5C07', bg: '#FFF8EB', active: '#E0970F' },
-    red: { color: '#B80606', bg: '#FFEBEB', active: '#FF3030' },
-    pink: { color: '#C620AB', bg: '#FFECFC', active: '#EA04C4' }
-}
-
-const UIAssessments: Array<Partial<Assessment>> = [
-
-]
-
-const UIPlanFeatures = [
-    { id: 'assessment', name: 'assessment', title: 'Assessments per month' },
-    { id: 'task', name: 'task', title: 'Tasks per month' },
-    { id: 'project', name: 'project', title: 'Paid projects' },
-    { id: 'career', name: 'career', title: 'Careers per account' },
-    { id: 'earn', name: 'earn', title: 'Earn with points and projects' },
-    { id: 'session', name: 'session', title: 'Exclusive 1/1 career sessions' },
-    { id: 'resume', name: 'resume', title: 'AI Resume and portfolio Builds' },
-    { id: 'support', name: 'support', title: 'Personalized 24/7 support' },
-    { id: 'report', name: 'report', title: 'Monthly growth report' },
-    { id: 'integration', name: 'integration', title: 'Custom integrations' },
-]
-
-const UITicketTopics = [
-    { label: 'Assessments', value: 'assessments' },
-    { label: 'Projects', value: 'projects' },
-    { label: 'Tasks', value: 'tasks' },
-    { label: 'Career Sessions', value: 'career sessions' },
-    { label: 'Earnings', value: 'earnings' },
-    { label: 'Subscription', value: 'subscription' },
-    { label: 'Leaderboard', value: 'leaderboard' },
-    { label: 'Roadmaps', value: 'roadmaps' },
-]
-
-const UIGrowth: ITalentGrowth = {
-    main: {
-        percent: 0,
-        level: '',
-        week: 0,
-        velocity: 0,
-        data: [
-            { name: 'Jan', plot: 4000, value: 1500 },
-            { name: 'Feb', plot: 3000, value: 2200 },
-            { name: 'Mar', plot: 2000, value: 1900 },
-            { name: 'Apr', plot: 2780, value: 5000 },
-            { name: 'May', plot: 1890, value: 4800 },
-            { name: 'Jun', plot: 2390, value: 7500 },
-            { name: 'Jul', plot: 3490, value: 9000 },
-        ]
-    },
-    timeline: [],
-    badges: [],
-    points: 0,
-    wallet: 0.00,
-    rubrics: [],
-    completions: [],
-    peers: [],
-    comparison: {
-        peerAveragePoints: 0,
-        percentile: 0,
-        totalPeers: 0,
-    },
-    roadmap: {
-        completed: 0,
-        pending: 0,
-    },
-    skills: [],
-    streak: {
-        current: 0,
-        longest: 0,
-        updatedAt: ''
-    }
-}
-
-const normWorkspace: { personal: IPersonalWorkspace | null, businesses: Array<IBusinessWorkspace> } = {
-    personal: null,
-    businesses: []
-}
-
-const taskSubmissionTypes = [
-    { name: 'Link', value: 'link' },
-    { name: 'File Upload', value: 'file' },
-]
-
 const apiresponse: IAPIResponse = {
     error: false,
     errors: [],
@@ -300,16 +180,6 @@ export {
     questionTypes,
     timeHandles,
     allocatedTimes,
-    coreResource,
-    onboard,
     bagdes,
-    UIAssessments,
-    UIPlanFeatures,
-    UITicketTopics,
-    UIGrowth,
-    aiquestion,
-    metrics,
-    normWorkspace,
-    taskSubmissionTypes,
     apiresponse
 };

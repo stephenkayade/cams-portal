@@ -1,4 +1,3 @@
-import React, { useEffect } from "react"
 import Button from "../buttons/Button";
 import Icon from "../icons/Icon";
 
@@ -19,10 +18,6 @@ const BGBlurUI = (props: IBGBlurUI) => {
         message,
         button
     } = props;
-
-    useEffect(() => {
-
-    }, [])
 
     const cc = () => {
         let result: string = 'absolute z-20 left-0 right-0 top-0 bottom-0 flex flex-col justify-center items-center bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/50'

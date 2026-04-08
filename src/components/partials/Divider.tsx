@@ -1,4 +1,3 @@
-import React, { useEffect, useState, useContext } from "react"
 import { IDivider } from "../../utils/interfaces.util";
 
 const Divider = (props: IDivider) => {
@@ -12,10 +11,6 @@ const Divider = (props: IDivider) => {
             bottom: 'pb-[1.2rem]'
         }
     } = props
-
-    useEffect(() => {
-
-    }, [])
 
     const cc = () => {
         let result = `divider h-auto`

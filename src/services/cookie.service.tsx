@@ -1,8 +1,6 @@
 import Cookies, { CookieSetOptions } from 'universal-cookie';
 import { IGetCookie, IRemoveCookie, ISetCookie } from '../utils/interfaces.util';
 
-
-
 class CookieService {
 
     private cookie: Cookies;

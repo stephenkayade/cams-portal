@@ -1,6 +1,5 @@
-import React, { CSSProperties, ReactNode, useEffect, useState } from "react"
+import { CSSProperties, ReactNode, useState } from "react"
 import IconButton from "../buttons/IconButton";
-import helper from "../../../utils/helper.util";
 
 interface IAccordionUI {
     control?: ReactNode,
@@ -53,10 +52,6 @@ const AccordionUI = (props: IAccordionUI) => {
     } = props;
 
     const [isOpen, setIsOpen] = useState(opened);
-
-    useEffect(() => {
-
-    }, [])
 
     const cov = () => {
 

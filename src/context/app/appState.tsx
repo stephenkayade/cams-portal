@@ -1,14 +1,9 @@
-import { Children, useReducer, useCallback, useContext, useMemo } from 'react'
+import { useReducer, useCallback, useMemo } from 'react'
 import GeniusContext from './appContext'
 import GeniusReducer from './appReducer'
-import AxiosService from '../../services/axios.service'
-import { IClearResource, ICollection, ISetLoading, ITaskSubmission, IUnsetLoading } from '../../utils/interfaces.util'
-import { useNavigate } from 'react-router-dom'
+import { IClearResource, ICollection, ISetLoading, IUnsetLoading } from '../../utils/interfaces.util'
 import storage from '../../utils/storage.util'
-import loader from '../../utils/loader.util'
-import { LoadingType } from '../../utils/types.util'
-import { aiquestion, collection, coreResource, metrics, pagination, UIAssessments, UIPoller } from '../../_data/seed'
-import helper from '../../utils/helper.util'
+import { collection, UIPoller } from '../../_data/seed'
 import {
     SET_LOADER,
     SET_LOADING,
@@ -19,47 +14,8 @@ const AppState = (props: any) => {
 
     const initialState = {
         poller: UIPoller,
-        assessments: collection,
-        assessment: {},
-        industries: collection,
-        industry: {},
-        careers: collection,
-        career: {},
-        fields: collection,
-        field: {},
-        skills: collection,
-        skill: {},
-        questions: collection,
-        question: {},
-        aiQuestions: aiquestion,
-        topics: collection,
-        topic: {},
-        pendingTasks: collection,
-        availableTasks: collection,
-        inprogressTasks: collection,
-        defaultedTasks: collection,
-        completedTasks: collection,
-        abandonedTasks: collection,
-        tasks: collection,
-        submissions: collection,
-        taskSubmissionItems: Array<ITaskSubmission>,
-        task: {},
-        comments: collection,
-        comment: {},
-        plans: collection,
-        plan: {},
-        transactions: collection,
-        transaction: {},
-        feedbacks: collection,
-        feedback: {},
-        tickets: collection,
-        ticket: {},
-        roadmaps: collection,
-        roadmap: {},
         items: [],
         uiFeatures: [],
-        core: coreResource,
-        metrics: metrics,
         search: collection,
         leaderboard: collection,
         camsDashboard: {},

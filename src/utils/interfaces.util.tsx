@@ -1,70 +1,6 @@
-import { ChangeEvent, CSSProperties, KeyboardEvent, RefObject, MouseEvent, ReactElement, ReactNode, LazyExoticComponent, LegacyRef } from "react";
+import { ChangeEvent, CSSProperties, KeyboardEvent, RefObject, MouseEvent, ReactElement, ReactNode, } from "react";
 import { AudioAcceptType, ButtonType, CSVAcceptType, DisabledType, DocAcceptType, FeatureCategory, FileAcceptType, FilterType, FlexReverseType, FontWeightType, FormatDateType, IconFamilyType, IconName, ImageAcceptType, LevelType, ListUIType, LoadingType, NavItemType, PagesearchType, PDFAcceptType, PositionType, QueryOrderType, QuestionType, RefineType, ResourceType, RouteActionType, RouteParamType, RubricType, SemanticType, SizeType, StatusType, UserType, VideoAcceptType } from "./types.util";
 import User from "../models/User.model";
-import Industry from "../models/Industry.model";
-import Question, { IQuestionTime } from "../models/Question.model";
-import Career from "../models/Career.model";
-import Field from "../models/Field.model";
-import Skill from "../models/Skill.model";
-import Topic from "../models/Topic.model";
-import Talent, { ITalentCareer, ITalentGrowth } from "../models/Talent.model";
-import Assessment from "../models/Assessment.model";
-import Subscription from "../models/Subscription.model";
-import Plan from "../models/Plan.model";
-import Transaction from "../models/Transaction.model";
-import Ticket from "../models/Ticket.model";
-import Roadmap from "../models/Roadmap.model";
-import Metric from "../models/Metric.model";
-import Task from "../models/Task.model";
-import Workspace, { IBusinessWorkspace, IPersonalWorkspace } from "../models/Workspace.model";
-
-export interface ISeedFeature {
-    plan: string,
-    features: Array<{
-        name: string,
-        category: FeatureCategory,
-        displayName: string,
-        description: string,
-        limit: number,
-        isEnabled: boolean,
-        modules: Array<Record<string, string>>,
-        frequency: "monthly" | "yearly" | "unbound",
-        pricing: {
-            naira: {
-                monthly: number,
-                yearly: number
-            },
-            dollar: {
-                monthly: number,
-                yearly: number
-            }
-        }
-    }>
-}
-
-export interface IUIFeature {
-    name: string,
-    displayName: string,
-    category: FeatureCategory,
-    plans: Array<{
-        name: string
-        limit: number,
-        label?: string
-        isEnabled: boolean,
-        modules: Array<Record<string, string>>,
-        frequency: "monthly" | "yearly" | "unbound",
-        pricing: {
-            naira: {
-                monthly: number,
-                yearly: number
-            },
-            dollar: {
-                monthly: number,
-                yearly: number
-            }
-        }
-    }>
-}
 
 export interface ISetCookie {
     key: string,
@@ -1345,34 +1281,14 @@ export interface ICollection {
     payload?: any
 }
 
-export interface ICoreResource {
-    industries: Array<Industry>,
-    careers: Array<Career>,
-    fields: Array<Field>,
-    skills: Array<Skill>,
-    topics: Array<Topic>
-}
-
 export interface IUserContext {
     users: ICollection,
     user: User,
-    talent: Talent,
-    mainCareer: ITalentCareer,
-    subscription: Subscription,
-    workspaces: ICollection,
-    workspace: Workspace,
-    normWorkspace: {
-        personal: IPersonalWorkspace | null,
-        businesses: Array<IBusinessWorkspace>
-    }
-    plan: Plan,
     userType: string,
     loading: boolean,
     loader: boolean,
-    workspaceLoading: boolean,
     sidebar: ISidebarProps,
     toast: IToastState,
-    growth: ITalentGrowth,
     setToast(data: IToastState): void,
     clearToast(): void,
     setSidebar(data: ISidebarProps): void,
@@ -1388,7 +1304,6 @@ export interface IAppContext {
     poller: IPoller,
     search: ICollection,
     items: Array<any>
-    uiFeatures: Array<IUIFeature>,
     camsDashboard: Record<string, any>,
     camsEvents: ICollection,
     camsEvent: any,

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext, MouseEvent } from "react"
+import { useState, MouseEvent } from "react"
 import Divider from "../../components/partials/Divider";
 import Alert from "../../components/partials/ui/Alert";
 import { IAlert } from "../../utils/interfaces.util";
@@ -29,10 +29,6 @@ const LoginPage = ({ }) => {
         show: false,
         message: ''
     });
-
-    useEffect(() => {
-
-    }, [])
 
     const toggleShow = (e: MouseEvent<HTMLElement>) => {
         if (e) e.preventDefault()

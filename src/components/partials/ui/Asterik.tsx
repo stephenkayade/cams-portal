@@ -1,15 +1,9 @@
-import React, { useEffect, useState, useContext } from "react"
-
 interface IAsterik {
     className?: string
     size?: string
 }
 
 const Asterik = ({ className = '', size = "h-[9px]" }: IAsterik) => {
-
-    useEffect(() => {
-
-    }, [])
 
     return (
         <>

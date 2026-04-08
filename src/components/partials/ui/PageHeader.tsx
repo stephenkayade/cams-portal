@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext, ReactNode } from "react"
+import { ReactNode } from "react"
 import { FontFamilyType, FontWeightType } from "../../../utils/types.util";
 
 interface IPageHeader {
@@ -18,10 +18,6 @@ const PageHeader = (props: IPageHeader) => {
         description = '',
         children = null
     } = props;
-
-    useEffect(() => {
-
-    }, [])
 
     const cf = () => {
         let result = 'font'

@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 import { IPlaceholder } from '../../utils/interfaces.util'
 
 const Placeholder = (props: Partial<IPlaceholder>) => {
@@ -13,10 +12,6 @@ const Placeholder = (props: Partial<IPlaceholder>) => {
         block = false,
         radius = 'rounded-full'
     } = props
-
-    useEffect(() => {
-
-    }, [])
 
     const cc = () => {
 

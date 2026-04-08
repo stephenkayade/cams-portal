@@ -1,5 +1,3 @@
-import React from "react"
-
 interface IAvatarUI{
     url: string,
     width?: string,

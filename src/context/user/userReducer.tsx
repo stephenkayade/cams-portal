@@ -15,29 +15,14 @@ import {
     SET_SEARCH,
     SET_RESPONSE,
     GET_ADMINS,
-    GET_AUDITS,
     SET_TOAST,
-    GET_TALENT,
-    GET_SUBSCRIPTION,
-    GET_PLAN,
-    SET_MAIN_CAREER,
-    GET_GROWTH_METRICS,
     SET_LOADER,
-    GET_WORKSPACES,
-    GET_WORKSPACE,
-    SET_NORM_WORKSPACE,
-    SET_WORKSPACE_LOADING
 } from '../types';
-
 
 const reducer = (state: any, action: any) => {
 
     switch (action.type) {
-        case GET_AUDITS:
-            return {
-                ...state,
-                audits: action.payload
-            }
+      
         case GET_USERS:
             return {
                 ...state,
@@ -58,50 +43,10 @@ const reducer = (state: any, action: any) => {
                 ...state,
                 user: action.payload,
             }
-        case GET_TALENT:
-            return {
-                ...state,
-                talent: action.payload,
-            }
-        case GET_SUBSCRIPTION:
-            return {
-                ...state,
-                subscription: action.payload,
-            }
-        case GET_PLAN:
-            return {
-                ...state,
-                plan: action.payload,
-            }
         case GET_USER:
             return {
                 ...state,
                 userDetails: action.payload,
-            }
-        case GET_GROWTH_METRICS:
-            return {
-                ...state,
-                growth: action.payload,
-            }
-        case GET_WORKSPACES:
-            return {
-                ...state,
-                workspaces: action.payload,
-            }
-        case GET_WORKSPACE:
-            return {
-                ...state,
-                workspace: action.payload,
-            }
-        case SET_NORM_WORKSPACE:
-            return {
-                ...state,
-                normWorkspace: action.payload,
-            }
-        case SET_MAIN_CAREER:
-            return {
-                ...state,
-                mainCareer: action.payload
             }
         case SET_USER:
             return {
@@ -173,11 +118,7 @@ const reducer = (state: any, action: any) => {
                 loading: false,
                 message: action.payload
             }
-        case SET_WORKSPACE_LOADING:
-            return {
-                ...state,
-                workspaceLoading: action.payload
-            }
+        
         default:
             return state;
     }

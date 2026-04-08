@@ -1,5 +1,4 @@
-import React, { useEffect, useState, useContext, useRef } from "react"
-import IconButton from "../buttons/IconButton";
+import { useState, useRef } from "react"
 import Button from "../buttons/Button";
 import Icon from "../icons/Icon";
 import Filter from "../drops/Filter";
@@ -38,10 +37,6 @@ const TableFooter = (props: ITableFooter) => {
     const { search, pageSearch, searchResource, filterResource } = useSearch({})
 
     const [LIMIT, setLimit] = useState<number>(limit ? limit : 25)
-
-    useEffect(() => {
-
-    }, [])
 
     const displayCount = () => {
 

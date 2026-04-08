@@ -10,8 +10,6 @@ import Login from '../../../pages/auth/Login'
 import Register from '../../../pages/auth/Register'
 import ResetPassword from '../../../pages/auth/ResetPassword'
 import VerifyPage from '../../../pages/auth/Verify'
-import InvitePage from '../../../pages/auth/invite/Invite'
-import BusinessInvitePage from '../../../pages/auth/invite/InviteBusiness'
 import NotFoundPage from '../../../pages/NotFound'
 
 const Dashboard = lazy(() => import('../../../pages/dashboard/cams/dashboard/Dashboard'))
@@ -45,10 +43,6 @@ const DynamicRoutes = () => {
                 return <VerifyPage />
             case 'reset-password':
                 return <ResetPassword />
-            case 'invite-accept':
-                return <InvitePage />
-            case 'invite-business':
-                return <BusinessInvitePage />
             case 'dashboard':
                 return <Dashboard />
             case 'events':

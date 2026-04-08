@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useContext, Fragment } from "react"
+import { useEffect, useState, Fragment } from "react"
 import helper from "../../../utils/helper.util";
-import { clamp, percent } from "framer-motion";
 
 interface IProgressBars {
     percent: number,

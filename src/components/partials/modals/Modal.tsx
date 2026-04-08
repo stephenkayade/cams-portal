@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react"
+import { useEffect, useState } from "react"
 import { ICustomModal } from "../../../utils/interfaces.util";
 import IconButton from "../buttons/IconButton";
 import { motion, type Variants } from 'framer-motion';
@@ -13,7 +13,6 @@ const Modal = (props: ICustomModal) => {
         header = true,
         hideOnClose = true,
         flattened,
-        className,
         children,
         child,
         backdrop = {

@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import pop from '../utils/loader.util'
+import { useEffect, useState } from 'react'
 import { SizeType } from '../utils/types.util'
 
 interface IUseSize {
