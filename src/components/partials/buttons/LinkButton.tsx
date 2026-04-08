@@ -1,4 +1,3 @@
-import React, { useEffect, useState, useContext } from "react"
 import Icon from "../icons/Icon";
 import { ILinkButton } from "../../../utils/interfaces.util";
 import { Link } from "react-router-dom";
@@ -23,10 +22,6 @@ const LinkButton = (props: ILinkButton) => {
         },
         onClick
     } = props;
-
-    useEffect(() => {
-
-    }, [])
 
     const handleClick = (e: any) => {
 

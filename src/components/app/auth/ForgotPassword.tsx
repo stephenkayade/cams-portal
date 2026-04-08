@@ -1,11 +1,10 @@
-import React, { useEffect, useState, useContext } from "react"
+import { useEffect, useState } from "react"
 import { IAlert, IForgotModal } from "../../../utils/interfaces.util";
 import Modal from "../../partials/modals/Modal";
 import FormField from "../../partials/inputs/FormField";
 import TextInput from "../../partials/inputs/TextInput";
 import Button from "../../partials/buttons/Button";
 import LinkButton from "../../partials/buttons/LinkButton";
-import Divider from "../../partials/Divider";
 import useAuth from "../../../hooks/app/useAuth";
 import Alert from "../../partials/ui/Alert";
 import Icon from "../../partials/icons/Icon";

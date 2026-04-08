@@ -1,4 +1,4 @@
-import React, { Fragment, lazy } from 'react'
+import { Fragment, lazy } from 'react'
 import { Routes, Route } from 'react-router-dom';
 import routes from '../../../routes/routes'
 import DashboardLayout from '../../layout/DashboardLayout'

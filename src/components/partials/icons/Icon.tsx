@@ -1,4 +1,4 @@
-import React, { useEffect, MouseEvent } from "react"
+import { MouseEvent } from "react"
 import { IICon } from "../../../utils/interfaces.util";
 import { Link } from "react-router-dom";
 import useGoTo from "../../../hooks/useGoTo";
@@ -19,10 +19,6 @@ const Icon = (props: IICon) => {
     } = props;
 
     const { goTo } = useGoTo()
-
-    useEffect(() => {
-
-    }, [])
 
     const fireOnClick = (e: MouseEvent<HTMLAnchorElement>) => {
 

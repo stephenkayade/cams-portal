@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useRef, useImperativeHandle, forwardRef, ForwardedRef } from "react"
-import { IFileInput, IFileUpload, IPasswordInput, ISearchInput, ITextInput } from "../../../utils/interfaces.util";
+import { useState, useRef, useImperativeHandle, forwardRef, ForwardedRef } from "react"
+import { IFileInput, IFileUpload} from "../../../utils/interfaces.util";
 import helper from "../../../utils/helper.util";
 import Icon from "../icons/Icon";
 import Fileog from "../dialogs/Fileog";
@@ -33,21 +33,6 @@ const FileInput = forwardRef((props: IFileInput, ref: ForwardedRef<any>) => {
     const inputRef = useRef<HTMLInputElement>(null)
     const fileRef = useRef<any>(null)
     const [file, setFile] = useState<IFileUpload | null>(null)
-
-    useEffect(() => {
-
-    }, [])
-
-    const lfs = () => {
-
-        let result: string = 'text-[12px]';
-
-        if (label && label.fontSize) {
-            result = `text-[${label.fontSize.toString()}px]`
-        }
-
-        return result;
-    }
 
     const cc = () => {
 

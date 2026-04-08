@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useImperativeHandle, forwardRef, ForwardedRef } from "react"
+import { useState, useRef, useImperativeHandle, forwardRef, ForwardedRef } from "react"
 import { Editor } from '@tinymce/tinymce-react';
 
 interface ITinyMCE {
@@ -10,18 +10,12 @@ interface ITinyMCE {
 const TinyMCE = forwardRef((props: ITinyMCE, ref: ForwardedRef<any>) => {
 
     const {
-        height = 600,
-        defaultValue,
-        preview = 'Start typing here'
+        height = 600
     } = props;
 
     const editorRef = useRef<any>(null);
     const [content, setContent] = useState<string>('');
     const [contentPreview, setContentPreview] = useState<string>('');
-
-    useEffect(() => {
-
-    }, [])
 
     const handleLog = () => {
         if (editorRef.current) {

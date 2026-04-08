@@ -1,4 +1,3 @@
-import React, { useEffect, useState, useContext } from "react"
 import Button from "../buttons/Button";
 import Icon from "../icons/Icon";
 
@@ -25,10 +24,6 @@ const Message = (props: IMessage) => {
             onClick: () => { }
         }
     } = props;
-
-    useEffect(() => {
-
-    }, [])
 
     const handleClick = (e: any) => {
         if (e) { e.preventDefault() }

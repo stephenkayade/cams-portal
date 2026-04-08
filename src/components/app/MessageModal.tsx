@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react"
+import { useEffect, useState } from "react"
 import { IMessageModal } from "../../utils/interfaces.util";
 import Modal from "../partials/modals/Modal";
 import useGoTo from "../../hooks/useGoTo";
@@ -21,7 +21,6 @@ const MessageModal = (props: IMessageModal) => {
         closeModal
     } = props;
 
-    const { toDetailRoute } = useGoTo()
     const [headIn, setHeadIn] = useState<boolean>(false)
 
     useEffect(() => {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext, ReactNode } from "react"
+import  {  ReactNode } from "react"
 import { FontWeightType } from "../../../utils/types.util";
 
 interface IFormField {
@@ -20,10 +20,7 @@ const FormField = (props: IFormField) => {
         className = '',
         label,
     } = props;
-
-    useEffect(() => {
-
-    }, [])
+    
     return (
         <>
             <div className={`form-field w-full ${className}`}>

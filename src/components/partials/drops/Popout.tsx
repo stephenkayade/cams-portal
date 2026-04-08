@@ -1,10 +1,9 @@
-import React, { useEffect, useState, forwardRef, useImperativeHandle, ForwardedRef, useRef, MouseEvent, Fragment } from "react"
-import { IFilter, IFilterItem, IPopout } from "../../../utils/interfaces.util";
+import { useEffect, useState, forwardRef, useImperativeHandle, ForwardedRef, useRef, MouseEvent, Fragment } from "react"
+import { IFilterItem, IPopout } from "../../../utils/interfaces.util";
 import Icon from "../icons/Icon";
 import AvatarUI from "../ui/AvatarUI";
 import TextInput from "../inputs/TextInput";
 import { Link } from "react-router-dom";
-import useSize from "../../../hooks/useSize";
 
 const Popout = forwardRef((props: IPopout, ref: ForwardedRef<any>) => {
 

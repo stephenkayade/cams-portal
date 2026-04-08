@@ -1,4 +1,3 @@
-import React, { useEffect } from "react"
 import { IButton } from "../../../utils/interfaces.util";
 import { Link } from "react-router-dom";
 import useSize from "../../../hooks/useSize";
@@ -6,7 +5,6 @@ import useSize from "../../../hooks/useSize";
 const Button = (props: IButton) => {
 
     const {
-        id,
         url = '',
         text,
         size = 'rg',
@@ -28,12 +26,7 @@ const Button = (props: IButton) => {
         onClick
     } = props;
 
-
     const ch = useSize({ size, type: 'button' })
-
-    useEffect(() => {
-
-    }, [])
 
     const cc = () => {
 

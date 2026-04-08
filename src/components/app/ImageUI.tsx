@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from "react"
-import { IImageUI, IResult } from "../../utils/interfaces.util";
+import { useEffect, useState } from "react"
+import { IImageUI } from "../../utils/interfaces.util";
 import IconButton from "../partials/buttons/IconButton";
-import useUploader from "../../hooks/app/useUploader";
 import Uploader from "../partials/dialogs/Uploader";
 
 const ImageUI = (props: IImageUI) => {
 
     const {
-        url,
         title,
-        className,
         onChange
     } = props;
 

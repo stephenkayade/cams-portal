@@ -1,4 +1,4 @@
-import React, { useEffect, useState, forwardRef, useImperativeHandle, ForwardedRef, useRef, MouseEvent, Fragment } from "react"
+import { useEffect, useState, forwardRef, useImperativeHandle, ForwardedRef, useRef, MouseEvent, Fragment } from "react"
 import { IFilter, IFilterItem } from "../../../utils/interfaces.util";
 import Icon from "../icons/Icon";
 import AvatarUI from "../ui/AvatarUI";

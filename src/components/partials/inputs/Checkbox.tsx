@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useRef, forwardRef, ForwardedRef, useImperativeHandle } from "react"
+import { useRef, forwardRef, ForwardedRef, useImperativeHandle } from "react"
 import { ICheckbox } from "../../../utils/interfaces.util";
-import helper from "../../../utils/helper.util";
 import useSize from "../../../hooks/useSize";
 
 const Checkbox = forwardRef((props: ICheckbox, ref: ForwardedRef<any>) => {
@@ -22,10 +21,6 @@ const Checkbox = forwardRef((props: ICheckbox, ref: ForwardedRef<any>) => {
 
     const ch = useSize({ size, type: 'checkbox' })
     const inputRef = useRef<HTMLInputElement>(null)
-
-    useEffect(() => {
-
-    }, [])
 
     const lfs = () => {
 

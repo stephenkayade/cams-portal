@@ -1,5 +1,5 @@
-import React, { useEffect, useState, forwardRef, useImperativeHandle, ForwardedRef, useRef, MouseEvent, Fragment } from "react"
-import { IFilter, IFilterItem, ISearchFilter, ISearchFilterItem } from "../../../utils/interfaces.util";
+import { useEffect, useState, forwardRef, useImperativeHandle, ForwardedRef, useRef, MouseEvent, Fragment } from "react"
+import { IFilterItem, ISearchFilter, ISearchFilterItem } from "../../../utils/interfaces.util";
 import Icon from "../icons/Icon";
 import AvatarUI from "../ui/AvatarUI";
 import TextInput from "../inputs/TextInput";

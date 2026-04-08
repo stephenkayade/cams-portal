@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useRef, useImperativeHandle, forwardRef, ForwardedRef } from "react"
-import { INumberInput, ITextInput } from "../../../utils/interfaces.util";
+import { useState, useRef, useImperativeHandle, forwardRef, ForwardedRef } from "react"
+import { INumberInput } from "../../../utils/interfaces.util";
 import helper from "../../../utils/helper.util";
 import useSize from "../../../hooks/useSize";
 
@@ -33,21 +33,6 @@ const NumberInput = forwardRef((props: INumberInput, ref: ForwardedRef<any>) => 
 
     const [inputId, setInputId] = useState<string>(helper.random(8, true))
     const inputRef = useRef<HTMLInputElement>(null)
-
-    useEffect(() => {
-
-    }, [])
-
-    const lfs = () => {
-
-        let result: string = 'text-[12px]';
-
-        if (label && label.fontSize) {
-            result = `text-[${label.fontSize.toString()}px]`
-        }
-
-        return result;
-    }
 
     const cc = () => {
 

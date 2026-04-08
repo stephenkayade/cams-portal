@@ -1,4 +1,3 @@
-import React, { useEffect, } from "react"
 import { IPageLayout } from "../../utils/interfaces.util";
 import Toast from "../partials/alerts/Toast";
 import useToast from "../../hooks/useToast";
@@ -6,11 +5,6 @@ import useToast from "../../hooks/useToast";
 const PageLayout = ({ component, navbar }: IPageLayout) => {
 
     const { toast, clearToast } = useToast()
-
-    useEffect(() => {
-
-    }, [])
-
 
     return (
         <>

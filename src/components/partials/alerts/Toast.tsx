@@ -1,4 +1,3 @@
-import React, { useEffect, useState, useContext } from "react"
 import { IToast } from "../../../utils/interfaces.util";
 import { Link } from "react-router-dom";
 
@@ -12,10 +11,6 @@ const Toast = (props: IToast) => {
         type,
         close
     } = props;
-
-    useEffect(() => {
-
-    }, [])
 
     const cc = () => {
         let result = `fixed z-[5000] w-[300px] min-h-[68px] py-[0.55rem] px-[0.95rem] rounded-[8px] shadow-toast top-0 mr-[2rem] ml-[2rem] leading-[20px]`

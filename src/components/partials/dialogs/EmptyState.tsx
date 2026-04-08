@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext, CSSProperties } from "react"
+import {CSSProperties } from "react"
 
 interface IEmptyState {
     children: any,
@@ -17,10 +17,6 @@ const EmptyState = (props: IEmptyState) => {
         style = {},
         noBound = false
     } = props;
-
-    useEffect(() => {
-
-    }, [])
 
     return (
         <>

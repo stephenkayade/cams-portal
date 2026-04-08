@@ -1,6 +1,5 @@
-import React, { useEffect, useImperativeHandle, forwardRef, useRef, ForwardedRef, useState, useContext } from "react"
+import { useImperativeHandle, forwardRef, useRef, ForwardedRef, useState } from "react"
 import { IFileog, IFileogRef, IFileUpload, } from "../../../utils/interfaces.util";
-import useSidebar from "../../../hooks/useSidebar";
 import useToast from "../../../hooks/useToast";
 
 const Fileog = forwardRef((props: IFileog, ref: ForwardedRef<IFileogRef>) => {
@@ -20,10 +19,6 @@ const Fileog = forwardRef((props: IFileog, ref: ForwardedRef<IFileogRef>) => {
     const { toast, setToast } = useToast()
     const [file, setFile] = useState<IFileUpload | null>(null);
     const [files, setFiles] = useState<Array<IFileUpload>>([]);
-
-    useEffect(() => {
-
-    }, [])
 
     const openDialog = (e?: any) => {
         if (e) { e.preventDefault() }

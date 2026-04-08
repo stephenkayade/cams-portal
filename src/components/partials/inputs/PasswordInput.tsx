@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useRef, useImperativeHandle, forwardRef, ForwardedRef } from "react"
-import { IPasswordInput, ISearchInput, ITextInput } from "../../../utils/interfaces.util";
+import { useEffect, useState, useRef, useImperativeHandle, forwardRef, ForwardedRef } from "react"
+import { IPasswordInput } from "../../../utils/interfaces.util";
 import helper from "../../../utils/helper.util";
 import Icon from "../icons/Icon";
 import useSize from "../../../hooks/useSize";
@@ -41,17 +41,6 @@ const PasswordInput = forwardRef((props: IPasswordInput, ref: ForwardedRef<any>)
     useEffect(() => {
 
     }, [])
-
-    const lfs = () => {
-
-        let result: string = 'text-[12px]';
-
-        if (label && label.fontSize) {
-            result = `text-[${label.fontSize.toString()}px]`
-        }
-
-        return result;
-    }
 
     const cc = () => {
 

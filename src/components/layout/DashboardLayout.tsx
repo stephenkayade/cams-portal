@@ -1,6 +1,4 @@
-import React, { useEffect, useState, useContext } from "react"
-import { IDashboardLayout, IUserContext } from "../../utils/interfaces.util";
-import UserContext from "../../context/user/userContext";
+import { IDashboardLayout } from "../../utils/interfaces.util";
 import SideBar from "../partials/navs/Sidebar";
 import Topbar from "../partials/navs/Topbar";
 import Toast from "../partials/alerts/Toast";
@@ -11,10 +9,6 @@ const DashboardLayout = ({ component, back, sidebar: sidenav, title }: IDashboar
 
     const { sidebar } = useSidebar({})
     const { toast, clearToast } = useToast()
-
-    useEffect(() => {
-
-    }, [])
 
     const mc = () => {
 

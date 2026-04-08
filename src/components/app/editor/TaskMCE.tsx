@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useImperativeHandle, forwardRef, ForwardedRef } from "react"
+import { useEffect, useState, useRef, useImperativeHandle, forwardRef, ForwardedRef } from "react"
 import { Editor } from '@tinymce/tinymce-react';
 
 interface ITaskMCE {
@@ -10,9 +10,7 @@ interface ITaskMCE {
 const TaskMCE = forwardRef((props: ITaskMCE, ref: ForwardedRef<any>) => {
 
     const {
-        height = 600,
-        defaultValue,
-        preview = 'Start typing here'
+        height = 600
     } = props;
 
     const editorRef = useRef<any>(null);

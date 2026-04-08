@@ -1,8 +1,7 @@
-import React, { useEffect, useState, useContext } from "react"
+import { useEffect, useState } from "react"
 import { IRedirectModal } from "../../utils/interfaces.util";
 import Modal from "../partials/modals/Modal";
 import useGoTo from "../../hooks/useGoTo";
-import { levels } from "../../_data/seed";
 import Button from "../partials/buttons/Button";
 import Icon from "../partials/icons/Icon";
 
@@ -20,7 +19,6 @@ const RedirectModal = (props: IRedirectModal) => {
         closeModal
     } = props;
 
-    const { goTo } = useGoTo()
     const [headIn, setHeadIn] = useState<boolean>(false)
 
     useEffect(() => {

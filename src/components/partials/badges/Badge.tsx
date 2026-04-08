@@ -1,7 +1,5 @@
-import React, { useEffect, useState, useContext, CSSProperties } from "react"
+import  { CSSProperties } from "react"
 import { IBadge } from "../../../utils/interfaces.util";
-import useSize from "../../../hooks/useSize";
-import { Link } from "react-router-dom";
 import Icon from "../icons/Icon";
 
 const Badge = (props: IBadge) => {
@@ -22,10 +20,6 @@ const Badge = (props: IBadge) => {
         },
         onClose = (e: any) => { }
     } = props;
-
-    useEffect(() => {
-
-    }, [])
 
     const csc = () => {
 

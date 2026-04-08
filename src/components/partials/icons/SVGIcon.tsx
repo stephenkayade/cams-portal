@@ -1,4 +1,3 @@
-import React, { useEffect, useState, useContext } from "react"
 import { ISVGIcon } from "../../../utils/interfaces.util";
 
 const SVGIcon = (props: ISVGIcon) => {
@@ -14,10 +13,6 @@ const SVGIcon = (props: ISVGIcon) => {
         stroke = 1,
         onClick
     } = props;
-
-    useEffect(() => {
-
-    }, [])
 
     const cc = () => {
         let result = `${width ? width : ''} ${height ? height : ''} ${position}`
