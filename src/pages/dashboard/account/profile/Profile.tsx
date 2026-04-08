@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext, useRef } from "react"
+import { useEffect, useState, useRef } from "react"
 import useSidebar from "../../../../hooks/useSidebar";
 import CardUI from "../../../../components/partials/ui/CardUI";
 import useUser from "../../../../hooks/app/useUser";
@@ -23,8 +23,8 @@ const ProfilePage = ({ }) => {
     const counRef = useRef<any>(null)
 
     useSidebar({ type: 'page', init: true })
-    const { talent, user, updateTalent, getTalent, loading: userLoading } = useUser()
-    const { toast, setToast, clearToast } = useToast()
+    const { user, loading: userLoading } = useUser()
+    const { toast, setToast } = useToast()
 
     const [loading, setLoading] = useState<boolean>(false);
     const [form, setForm] = useState({
@@ -48,26 +48,6 @@ const ProfilePage = ({ }) => {
         if (e) { e.preventDefault() }
 
         setLoading(true)
-
-        const response = await updateTalent(form);
-
-        if (!response.error) {
-            setLoading(false)
-            setToast({ show: true, type: 'success', title: 'Successful', message: 'Changes saved successfully', position: 'top-right' })
-            getTalent()
-        }
-
-        if (response.error) {
-
-            setLoading(false)
-
-            if (response.errors.length > 0) {
-                setToast({ show: true, type: 'error', title: 'Error', message: response.errors.join(','), error: 'all', position: 'top-right' })
-            } else {
-                setToast({ show: true, type: 'error', title: 'Error', message: response.message, error: 'all', position: 'top-right' })
-            }
-
-        }
 
         setTimeout(() => {
             setToast({ ...toast, show: false, error: '' })
@@ -104,7 +84,7 @@ const ProfilePage = ({ }) => {
 
                         <div
                             className="min-w-[86px] min-h-[86px] bg-pag-100 rounded-full flex items-center justify-center full-bg relative"
-                            style={{ backgroundImage: `url("${form.avatar ? form.avatar : talent.avatar ? talent.avatar : ""}")` }}>
+                            style={{ backgroundImage: `url("")` }}>
                             {!userLoading &&
                                 <IconButton
                                     size="min-w-[1.8rem] min-h-[1.8rem]"
@@ -121,7 +101,7 @@ const ProfilePage = ({ }) => {
                                     }}
                                 />
                             }
-                            {!talent.avatar && <Icon name="media-image" type="polio" size={16} className="pab-900" />}
+                            {/* {!talent.avatar && <Icon name="media-image" type="polio" size={16} className="pab-900" />} */}
                         </div>
 
                         <div className="cursor-pointer" onClick={(e) => { if (avaRef.current) { avaRef.current.open(e) } }}>
@@ -143,7 +123,7 @@ const ProfilePage = ({ }) => {
                                     showFocus={true}
                                     autoComplete={false}
                                     placeholder="Ex. Benson"
-                                    defaultValue={talent.firstName}
+                                    defaultValue={user.firstName}
                                     isError={toast.error === 'firstname' ? true : false}
                                     label={{
                                         required: false,
@@ -163,7 +143,7 @@ const ProfilePage = ({ }) => {
                                     showFocus={true}
                                     autoComplete={false}
                                     placeholder="Ex. Bullocks"
-                                    defaultValue={talent.lastName}
+                                    defaultValue={user.lastName}
                                     isError={toast.error === 'lastname' ? true : false}
                                     label={{
                                         required: false,
@@ -237,7 +217,7 @@ const ProfilePage = ({ }) => {
                                 showFocus={true}
                                 autoComplete={false}
                                 placeholder="Ex. Benson"
-                                defaultValue={talent.username}
+                                // defaultValue={talent.username}
                                 isError={toast.error === 'username' ? true : false}
                                 icon={{
                                     enable: true,
@@ -268,7 +248,7 @@ const ProfilePage = ({ }) => {
                                     className='la-filter'
                                     placeholder="Gender"
                                     position="bottom"
-                                    defaultValue={talent.gender}
+                                    // defaultValue={talent.gender}
                                     menu={{
                                         style: {},
                                         search: false,
@@ -299,7 +279,7 @@ const ProfilePage = ({ }) => {
                                     className='la-filter'
                                     placeholder="Country"
                                     position="bottom"
-                                    defaultValue={talent.homeCountry?.code2 || ''}
+                                    // defaultValue={talent.homeCountry?.code2 || ''}
                                     menu={{
                                         style: {},
                                         search: true,
