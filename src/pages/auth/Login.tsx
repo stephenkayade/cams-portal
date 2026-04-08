@@ -157,7 +157,7 @@ const LoginPage = ({ }) => {
                                     />
                                 </FormField>
 
-                                <FormField className="mb-[1rem] text-center pt-[1rem] pb-[1rem]">
+                                {/* <FormField className="mb-[1rem] text-center pt-[1rem] pb-[1rem]">
                                     <LinkButton
                                         text={{
                                             label: 'New User?',
@@ -188,7 +188,7 @@ const LoginPage = ({ }) => {
                                         url=""
                                         onClick={(e) => { goTo('/register') }}
                                     />
-                                </FormField>
+                                </FormField> */}
 
                             </div>
 

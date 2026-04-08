@@ -126,7 +126,7 @@ const Modal = (props: ICustomModal) => {
 
                                 {
                                     header &&
-                                    <div className="modal-header flex items-center">
+                                    <div className="modal-header flex justify-between items-center">
 
                                         <h2 className="fs-16 mrgb0 font-mona-medium lasb-950">{title}</h2>
                                         <IconButton
